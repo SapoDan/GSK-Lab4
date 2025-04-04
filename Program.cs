@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab_2_Polygons
+namespace Lab_3
 {
     static class Program
     {

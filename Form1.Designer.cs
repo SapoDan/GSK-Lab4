@@ -1,17 +1,15 @@
 ﻿
-namespace Lab_2_Polygons
+namespace Lab_3
 {
     partial class Form1
     {
-        /// <summary>
-        /// Обязательная переменная конструктора.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Освободить все используемые ресурсы.
-        /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBoxTMO;
+        private System.Windows.Forms.Button buttonApply;
+        private System.Windows.Forms.Button buttonClear;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,132 +19,82 @@ namespace Lab_2_Polygons
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
-
-        /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorPickButton = new System.Windows.Forms.Button();
-            this.fillStyleComboBox = new System.Windows.Forms.ComboBox();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxTMO = new System.Windows.Forms.ComboBox();
+            this.buttonApply = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox
+            // pictureBox1
             // 
-            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.Location = new System.Drawing.Point(168, 15);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(891, 548);
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
-            this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1067, 738);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.PictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PictureBox1_MouseDown);
             // 
-            // colorDialog1
+            // comboBoxTMO
             // 
-            this.colorDialog1.AnyColor = true;
-            this.colorDialog1.FullOpen = true;
-            this.colorDialog1.SolidColorOnly = true;
+            this.comboBoxTMO.Items.AddRange(new object[] {
+            "Объединение",
+            "Пересечение",
+            "Симметричная разность",
+            "Разность A\\B",
+            "Разность B\\A"});
+            this.comboBoxTMO.Location = new System.Drawing.Point(224, 15);
+            this.comboBoxTMO.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxTMO.Name = "comboBoxTMO";
+            this.comboBoxTMO.Size = new System.Drawing.Size(199, 24);
+            this.comboBoxTMO.TabIndex = 2;
+            this.comboBoxTMO.SelectedIndexChanged += new System.EventHandler(this.ComboBoxTMO_SelectedIndexChanged);
             // 
-            // colorPickButton
+            // buttonApply
             // 
-            this.colorPickButton.Location = new System.Drawing.Point(113, 79);
-            this.colorPickButton.Margin = new System.Windows.Forms.Padding(4);
-            this.colorPickButton.Name = "colorPickButton";
-            this.colorPickButton.Size = new System.Drawing.Size(20, 16);
-            this.colorPickButton.TabIndex = 2;
-            this.colorPickButton.UseVisualStyleBackColor = true;
-            this.colorPickButton.Click += new System.EventHandler(this.colorPickButton_click);
+            this.buttonApply.Location = new System.Drawing.Point(432, 12);
+            this.buttonApply.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonApply.Name = "buttonApply";
+            this.buttonApply.Size = new System.Drawing.Size(160, 28);
+            this.buttonApply.TabIndex = 3;
+            this.buttonApply.Text = "Выполнить операцию";
+            this.buttonApply.UseVisualStyleBackColor = true;
+            this.buttonApply.Click += new System.EventHandler(this.buttonApply_Click);
             // 
-            // fillStyleComboBox
+            // buttonClear
             // 
-            this.fillStyleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.fillStyleComboBox.FormattingEnabled = true;
-            this.fillStyleComboBox.Items.AddRange(new object[] {
-            "Неориентированный",
-            "Ориентированный"});
-            this.fillStyleComboBox.Location = new System.Drawing.Point(3, 38);
-            this.fillStyleComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.fillStyleComboBox.Name = "fillStyleComboBox";
-            this.fillStyleComboBox.Size = new System.Drawing.Size(160, 24);
-            this.fillStyleComboBox.TabIndex = 3;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Location = new System.Drawing.Point(33, 118);
-            this.clearButton.Margin = new System.Windows.Forms.Padding(4);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(100, 28);
-            this.clearButton.TabIndex = 4;
-            this.clearButton.Text = "Очистить";
-            this.clearButton.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Тип многоугольника";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Выбрать цвет";
+            this.buttonClear.Location = new System.Drawing.Point(600, 12);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(100, 28);
+            this.buttonClear.TabIndex = 4;
+            this.buttonClear.Text = "Очистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1067, 578);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.fillStyleComboBox);
-            this.Controls.Add(this.colorPickButton);
-            this.Controls.Add(this.pictureBox);
+            this.ClientSize = new System.Drawing.Size(1067, 738);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonApply);
+            this.Controls.Add(this.comboBoxTMO);
+            this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(554, 285);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Закрашивание многоугольников";
+            this.Text = "Операции с полигонами";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.SizeChanged += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
-
-        #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button colorPickButton;
-        private System.Windows.Forms.ComboBox fillStyleComboBox;
-        private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
