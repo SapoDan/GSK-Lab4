@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -132,82 +132,6 @@ namespace GSC_Lr4
                 float[] m3 = Mul13(C, m33);
 
                 fP.X = m3[0];   fP.Y = m3[1];
-                VertexList[i] = fP;
-            }
-        }
-
-        public void Rotate(int dx, int dy)
-        {
-            int n = VertexList.Count() - 1;
-            PointF fP = new PointF();
-
-            // нахождение центра
-            float centerX = 0, centerY = 0;
-            foreach (PointF p in VertexList)
-            {
-                centerX += p.X;
-                centerY += p.Y;
-            }
-            centerX /= (n + 1);
-            centerY /= (n + 1);
-
-            // обработка угла
-            float angle = (float)(-dx * Math.PI / 180.0);
-            float cos = (float)Math.Cos(angle);
-            float sin = (float)Math.Sin(angle);
-
-            // создание матриц
-            float[,] moveToOrigin = MoveM(-centerX, -centerY);
-            float[,] rotate = new float[,] { { cos, -sin, 0 }, { sin, cos, 0 }, { 0, 0, 1 } };
-            float[,] moveBack = MoveM(centerX, centerY);
-
-            // комбинирование преобразований в центр, повернуть, обратно
-            float[,] m33 = Mul33(moveToOrigin, rotate);
-            m33 = Mul33(m33, moveBack);
-
-
-            for (int i = 0; i <= n; i++)
-            {
-                float[] C = PointM(VertexList[i]);
-                float[] m3 = Mul13(C, m33);
-                fP.X = m3[0]; fP.Y = m3[1];
-                VertexList[i] = fP;
-            }
-        }
-
-        public void Scale(int dx, int dy)
-        {
-            int n = VertexList.Count() - 1;
-            PointF fP = new PointF();
-
-            // нахождение центра
-            float centerX = 0, centerY = 0;
-            foreach (PointF p in VertexList)
-            {
-                centerX += p.X;
-                centerY += p.Y;
-            }
-            centerX /= (n + 1);
-            centerY /= (n + 1);
-
-            // нахождение факторов масштаба
-            float sx = 1 + dx / 100f;
-            float sy = 1 - dy / 100f;
-
-            // создание матриц
-            float[,] moveToOrigin = MoveM(-centerX, -centerY);
-            float[,] scale = ScaleM(sx, sy);
-            float[,] moveBack = MoveM(centerX, centerY);
-
-            // комбинирование преобразований в центр, масштабировать, обратно
-            float[,] m33 = Mul33(moveToOrigin, scale);
-            m33 = Mul33(m33, moveBack);
-
-            for (int i = 0; i <= n; i++)
-            {
-                float[] C = PointM(VertexList[i]);
-                float[] m3 = Mul13(C, m33);
-                fP.X = m3[0]; fP.Y = m3[1];
                 VertexList[i] = fP;
             }
         }

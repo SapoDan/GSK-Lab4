@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +17,7 @@ namespace GSC_Lr4
         Pen DrawPen = new Pen(Color.Black, 1);
         List<Point> VertexList = new List<Point>();
         Pgn NewPgn = new Pgn();
-        int operation = 1; // Рисование
-        int transformType = 0; // Перемещение
+        int Operation = 1; // Рисование
         bool checkPgn = false;
         Point pictureBox1MousePos = new Point();
         Brush Br = new SolidBrush(Color.Blue);
@@ -28,8 +27,6 @@ namespace GSC_Lr4
             InitializeComponent();
             myBitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(myBitmap);
-
-            comboBox2.SelectedIndex = 0;
         }
 
         // заполнение списка вершин
@@ -53,20 +50,22 @@ namespace GSC_Lr4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            operation = 2;
+            if ((Operation == 1) || (Operation == 0))
+                Operation = 2;
+            else Operation = 1;
         }
 
-        // Обработчик события щелчка мыши
+        // Обработчик события
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             pictureBox1MousePos = e.Location;
 
-            switch (operation)
+            switch (Operation)
             {
                 case 1:   // Ввод вершин
                     {
                         InputPgn(e);
-                        if (e.Button == MouseButtons.Right) operation = 0;
+                        if (e.Button == MouseButtons.Right) Operation = 0;
                     }
                     break;
                 case 2:   // Выбор
@@ -81,45 +80,24 @@ namespace GSC_Lr4
             pictureBox1.Image = myBitmap;
         }
 
-        // Обработчик события движения мыши
+        // Обработчик события
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left && checkPgn)
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                // Calculate mouse movement delta
-                int dx = e.X - pictureBox1MousePos.X;
-                int dy = e.Y - pictureBox1MousePos.Y;
-
-                switch (transformType)
+                if (Operation == 2 & checkPgn)
                 {
-                    case 0: // Move (перемещение)
-                        NewPgn.Move(dx, dy);
-                        break;
+                    NewPgn.Move(e.X - pictureBox1MousePos.X, e.Y - pictureBox1MousePos.Y);
+                    g.Clear(pictureBox1.BackColor);
 
-                    case 1: // Rotate (вращение)
-                            // Convert horizontal movement to rotation angle (1 pixel = 1 degree)
-                        int rotationAngle = dx;
-                        NewPgn.Rotate(rotationAngle, 0); // dy ignored for rotation
-                        break;
+                    NewPgn.Fill(g, DrawPen);
+                    pictureBox1.Image = myBitmap;
 
-                    case 2: // Scale (масштабирование)
-                            // Convert movement to scaling factors (1 pixel = 1% scaling)
-                        int scaleX = dx;
-                        int scaleY = dy;
-                        NewPgn.Scale(scaleX, scaleY);
-                        break;
+                    pictureBox1MousePos = e.Location;
+
                 }
-
-                // Redraw the scene
-                g.Clear(pictureBox1.BackColor);
-                NewPgn.Fill(g, DrawPen);
-                pictureBox1.Image = myBitmap;
-
-                // Update mouse position
-                pictureBox1MousePos = e.Location;
             }
         }
-
 
         // Обработчик события выбора цвета в элементе ComboBox cbLineColor
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -143,20 +121,8 @@ namespace GSC_Lr4
             pictureBox1.Image = myBitmap;
             g.Clear(pictureBox1.BackColor);
             NewPgn.Clear();
-            operation = 1;
+            Operation = 1;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        // Выбор типа преобразования
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            transformType = comboBox2.SelectedIndex;
-            // 0 - перемещение, 1 - вращение, 2 - масштабирование
-        }
     }
 }
-
