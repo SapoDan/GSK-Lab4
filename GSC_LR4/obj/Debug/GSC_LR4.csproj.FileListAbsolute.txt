@@ -1,0 +1,38 @@
+D:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe.config
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_Lr4.Form1.resources
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.Properties.Resources.resources
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.GenerateResource.Cache
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.pdb
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.exe
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.pdb
+d:\Project C#\OpenTK3_1\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csprojResolveAssemblyReference.cache
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe.config
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.exe
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.pdb
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csprojResolveAssemblyReference.cache
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_Lr4.Form1.resources
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.Properties.Resources.resources
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.GenerateResource.Cache
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe
+d:\Project C#\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.pdb
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe.config
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.pdb
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.AssemblyReference.cache
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_Lr4.Form1.resources
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.Properties.Resources.resources
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.GenerateResource.cache
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.CoreCompileInputs.cache
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.exe
+c:\D\Project C#2022\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.pdb
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe.config
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.exe
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\bin\Debug\GSC_LR4.pdb
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.AssemblyReference.cache
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_Lr4.Form1.resources
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.Properties.Resources.resources
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.GenerateResource.cache
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.csproj.CoreCompileInputs.cache
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.exe
+D:\Downloads\GSC_LR4_0\GSC_LR4\GSC_LR4\obj\Debug\GSC_LR4.pdb
